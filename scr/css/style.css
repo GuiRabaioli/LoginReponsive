@@ -63,13 +63,14 @@ body {
 
 .btn {
   border-radius: 15px;
+  margin-top: 1rem;
   text-transform: uppercase;
   color: #fff;
   font-size: 10px;
   padding: 10px 50px;
   cursor: pointer;
   font-weight: bold;
-  width: 150px;
+  width: 95%;
   align-self: center;
 }
 
@@ -79,6 +80,10 @@ body {
   transition: 0.3s ease-in-out;
   outline: unset;
 }
+.btn_unico{
+  width: 150px;
+}
+
 
 .btn_primary:hover {
   background-color: #fff;
@@ -225,7 +230,7 @@ label {
   border-bottom-right-radius: 15px;
   animation: slidein 1.3s;
 
-  z-index: 12;
+  z-index: 12; 
 }
 
 .sign-up-js .second__content .first_column,
@@ -250,8 +255,19 @@ label {
 
 .sign-up-js .second__content .second_column {
   position: relative;
-  z-index: -1;
+  z-index: -2;
   animation: deslocamentoDir 1.3s; 
+}
+
+.sign-up-js .content::before {
+  left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  animation: slideout 1.3s;
+
+  z-index: 12;
 }
 
 /*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
@@ -266,13 +282,11 @@ label {
   25% {
     left: -80px;
     opacity: 0;
-    /* z-index: 12; NÃO HÁ NECESSIDADE */
   }
 
   50% {
     left: -100px;
     opacity: 0;
-    /* z-index: 12; NÃO HÁ NECESSIDADE */
   }
 
   to {
@@ -284,21 +298,23 @@ label {
 
 @keyframes deslocamentoDir {
   from {
-    left: 0;
-    z-index: 12;
+    left: 0px;
+    opacity: 0;
+    z-index: 12; 
   }
 
   25% {
+    opacity: 0;
     left: 80px;
-    z-index: 12;  
   }
 
   50% {
+    opacity: 0;
     left: 100px;
-    z-index: 12;
   }
 
   to {
+    opacity: 0;
     left: 110px;
     z-index: -1;
   }
@@ -404,13 +420,12 @@ label {
     25% {
       top: -80px;
       opacity: 0.5;
-      /* z-index: 12; NÃO HÁ NECESSIDADE */
     }
 
     50% {
       top: -100px;
       opacity: 0.2;
-      /* z-index: 12; NÃO HÁ NECESSIDADE */
+
     }
 
     to {
@@ -428,13 +443,12 @@ label {
 
     25% {
       top: 80px;
-      /* z-index: 12;  NÃO HÁ NECESSIDADE*/
+
     }
 
     50% {
       top: 100px;
-      /* z-index: 12; NÃO HÁ NECESSIDADE*/
-      /* background-color: yellow;  Exemplo que dei no vídeo*/
+
     }
 
     to {
