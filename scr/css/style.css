@@ -438,21 +438,23 @@ label {
   @keyframes deslocamentoDir {
     from {
       top: 0;
+      opacity: 0;
       z-index: 12;
     }
 
     25% {
       top: 80px;
-
+      opacity: 0;
     }
 
     50% {
       top: 100px;
-
+      opacity: 0;
     }
 
     to {
       top: 110px;
+      opacity: 0;
       z-index: -1;
     }
   }
